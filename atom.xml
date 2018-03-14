@@ -6,7 +6,7 @@
   <link href="/Harry.github.io/atom.xml" rel="self"/>
   
   <link href="https://cq-harry.github.io/Harry.github.io/"/>
-  <updated>2018-03-14T07:40:32.476Z</updated>
+  <updated>2018-03-14T10:07:07.752Z</updated>
   <id>https://cq-harry.github.io/Harry.github.io/</id>
   
   <author>
@@ -15,6 +15,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eclipse IDEA 码云 插件 OSCGit</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/14/Eclipse-IDEA-%E7%A0%81%E4%BA%91-%E6%8F%92%E4%BB%B6-OSCGit/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/14/Eclipse-IDEA-码云-插件-OSCGit/</id>
+    <published>2018-03-14T10:04:02.000Z</published>
+    <updated>2018-03-14T10:07:07.752Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>Eclipse</p><p> Eclipse <strong>Mars</strong></p><pre><code>1. 通过应用市场安装搜索oschinagit2. 通过 update site 安装：    **location:** http://droidqw.oschina.io/update-site/4.5/</code></pre><p> Eclipse <strong>Luna</strong></p><pre><code>1. 通过应用市场安装搜索oschinagit2. 通过 update site 安装：    **location：**http://droidqw.oschina.io/update-site/4.4/</code></pre></li></ol><a id="more"></a><ol><li>IDEA<ul><li>插件库搜索：<strong>GitOSC</strong></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Eclipse&lt;/p&gt;
+&lt;p&gt; Eclipse &lt;strong&gt;Mars&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 通过应用市场安装搜索oschinagit
+2. 通过 update site 安装：
+    **location:** http://droidqw.oschina.io/update-site/4.5/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; Eclipse &lt;strong&gt;Luna&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 通过应用市场安装搜索oschinagit
+2. 通过 update site 安装：
+    **location：**http://droidqw.oschina.io/update-site/4.4/
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/"/>
+    
+      <category term="Eclipse" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/Eclipse/"/>
+    
+    
+      <category term="Eclipse" scheme="https://cq-harry.github.io/Harry.github.io/tags/Eclipse/"/>
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
+    
+      <category term="码云" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E7%A0%81%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java float精度计算的问题</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/14/Java-float%E7%B2%BE%E5%BA%A6%E8%AE%A1%E7%AE%97%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/14/Java-float精度计算的问题/</id>
+    <published>2018-03-14T09:59:24.000Z</published>
+    <updated>2018-03-14T10:02:53.681Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>方法一</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">123.2334f</span>;</span><br><span class="line"><span class="comment">//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)</span></span><br><span class="line"><span class="keyword">float</span> b = (<span class="keyword">float</span>) (Math.round(a * <span class="number">100</span>)) / <span class="number">100</span>;</span><br></pre></td></tr></table></figure></li><li><p>方法二</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> DecimalFormat(<span class="string">"###,###,###.##"</span>).format(<span class="number">100.12345</span>);</span><br></pre></td></tr></table></figure></li><li><p>方法三</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> ft = <span class="number">134.3435f</span>;</span><br><span class="line"><span class="comment">//设置位数</span></span><br><span class="line"><span class="keyword">int</span> scale = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//表示四舍五入，可以选择其他舍值方式，例如去尾，等等.</span></span><br><span class="line"><span class="keyword">int</span> roundingMode = <span class="number">4</span>;</span><br><span class="line">BigDecimal bd = <span class="keyword">new</span> BigDecimal((<span class="keyword">double</span>) ft);</span><br><span class="line">bd = bd.setScale(scale, roundingMode);</span><br><span class="line">ft = bd.floatValue();</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;方法一&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;123.2334f&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; b = (&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt;) (Math.round(a * &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;)) / &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方法二&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cq-harry.github.io/Harry.github.io/categories/Java/"/>
+    
+    
+      <category term="java" scheme="https://cq-harry.github.io/Harry.github.io/tags/java/"/>
+    
+      <category term="float" scheme="https://cq-harry.github.io/Harry.github.io/tags/float/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js在控制台打印调试console对象</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/14/Js%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%93%E5%8D%B0%E8%B0%83%E8%AF%95console%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/14/Js在控制台打印调试console对象/</id>
+    <published>2018-03-14T09:54:50.000Z</published>
+    <updated>2018-03-14T10:01:14.362Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//IE控制台</span></span><br><span class="line">log  info  warn  error  assert  dir  clear  profile  profileEnd  </span><br><span class="line"></span><br><span class="line"><span class="comment">//Firebug控制台</span></span><br><span class="line">log  info  warn  error  debug  exception  assert  dir  dirxml  trace  group  groupEnd  groupCollapsed  time  timeEnd  profile  profileEnd  count  clear  table notifyFirebug  firebug </span><br><span class="line"></span><br><span class="line"><span class="comment">//Chrom控制台</span></span><br><span class="line">profiles  memory  debug  error  info  log  warn  dir  dirxml  trace  assert  count  markTimeline  profile  profileEnd  time  timeEnd  group  groupCollapsed  groupEnd</span><br><span class="line"></span><br><span class="line"><span class="comment">//Opera控制台</span></span><br><span class="line">time  timeEnd  trace  profile  profileEnd  debug  log info  warn  error  assert  dir  dirxml  group  groupCollapsed  groupEnd  count  table</span><br></pre></td></tr></table></figure><h5 id="四种浏览器对log、info、warn、error四个基本方法都是支持的"><a href="#四种浏览器对log、info、warn、error四个基本方法都是支持的" class="headerlink" title="四种浏览器对log、info、warn、error四个基本方法都是支持的"></a>四种浏览器对log、info、warn、error四个基本方法都是支持的</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://cq-harry.github.io/Harry.github.io/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="https://cq-harry.github.io/Harry.github.io/tags/javascript/"/>
+    
+      <category term="console" scheme="https://cq-harry.github.io/Harry.github.io/tags/console/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA 快捷键</title>
