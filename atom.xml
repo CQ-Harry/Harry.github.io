@@ -6,7 +6,7 @@
   <link href="/Harry.github.io/atom.xml" rel="self"/>
   
   <link href="https://cq-harry.github.io/Harry.github.io/"/>
-  <updated>2018-03-13T07:08:31.519Z</updated>
+  <updated>2018-03-14T07:40:32.476Z</updated>
   <id>https://cq-harry.github.io/Harry.github.io/</id>
   
   <author>
@@ -17,34 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello world！</title>
-    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/13/hello-world%EF%BC%81/"/>
-    <id>https://cq-harry.github.io/Harry.github.io/2018/03/13/hello-world！/</id>
-    <published>2018-03-13T06:23:03.000Z</published>
-    <updated>2018-03-13T07:08:31.519Z</updated>
+    <title>IDEA 快捷键</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/14/IDEA-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/14/IDEA-快捷键/</id>
+    <published>2018-03-14T07:35:06.000Z</published>
+    <updated>2018-03-14T07:40:32.476Z</updated>
     
-    <content type="html"><![CDATA[<p>首次搭建github+hexo博客</p>]]></content>
+    <content type="html"><![CDATA[<ul><li>生成 foreach</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">iter <span class="title">Iterate</span><span class="params">(<span class="keyword">for</span> each..in)</span></span></span><br><span class="line"><span class="function">itin <span class="title">Iterate</span><span class="params">(<span class="keyword">for</span> ..in)</span></span></span><br><span class="line"><span class="function">itli Iterate over a List</span></span><br><span class="line"><span class="function">itar Iterate elements of array</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;首次搭建github+hexo博客&lt;/p&gt;
-
+        &lt;ul&gt;
+&lt;li&gt;生成 foreach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=
       
     
     </summary>
     
-      <category term="首次搭建" scheme="https://cq-harry.github.io/Harry.github.io/categories/%E9%A6%96%E6%AC%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/"/>
     
     
-      <category term="hello" scheme="https://cq-harry.github.io/Harry.github.io/tags/hello/"/>
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
     
-      <category term="github" scheme="https://cq-harry.github.io/Harry.github.io/tags/github/"/>
-    
-      <category term="hexo" scheme="https://cq-harry.github.io/Harry.github.io/tags/hexo/"/>
-    
-      <category term="npm" scheme="https://cq-harry.github.io/Harry.github.io/tags/npm/"/>
+      <category term="快捷键" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
