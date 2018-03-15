@@ -6,7 +6,7 @@
   <link href="/Harry.github.io/atom.xml" rel="self"/>
   
   <link href="https://cq-harry.github.io/Harry.github.io/"/>
-  <updated>2018-03-14T10:07:07.752Z</updated>
+  <updated>2018-03-15T10:12:39.170Z</updated>
   <id>https://cq-harry.github.io/Harry.github.io/</id>
   
   <author>
@@ -15,6 +15,253 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maven 常用命令</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/maven-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/maven-常用命令/</id>
+    <published>2018-03-15T10:11:59.000Z</published>
+    <updated>2018-03-15T10:12:39.170Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>maven官方库：<br><strong><a href="http://repo2.maven.org/maven2/" target="_blank" rel="noopener">http://repo2.maven.org/maven2/</a></strong></p></li><li><p>阿里云镜像：</p></li></ul><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;alimaven&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;aliyun maven&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;http://maven.aliyun.com/nexus/content/repositories/central/&lt;/url&gt;</span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure><ul><li><p>maven依赖查询：<a href="http://mvnrepository.com/" target="_blank" rel="noopener">http://mvnrepository.com/</a></p></li><li><p>maven常用命令：</p></li></ul><ol><li><p>创建Maven的普通java项目</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=projectName</span><br></pre></td></tr></table></figure></li><li><p>创建Maven的Web项目</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=webappName</span><br><span class="line">-DarchetypeArtifactId=maven-archetype-webapp</span><br></pre></td></tr></table></figure></li><li><p>编译源代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile</span><br></pre></td></tr></table></figure></li><li><p>编译测试代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure></li><li><p>运行测试：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test</span><br></pre></td></tr></table></figure></li><li><p>产生site：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn site</span><br></pre></td></tr></table></figure></li><li><p>打包：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure></li><li><p>在本地Repository中安装jar：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install</span><br></pre></td></tr></table></figure></li><li><p>清除产生的项目：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure></li><li><p>生成eclipse项目：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:eclipse</span><br></pre></td></tr></table></figure></li><li><p>生成idea项目：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn idea:idea</span><br></pre></td></tr></table></figure></li><li><p>组合使用goal命令，如只打包不测试：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -Dtest package</span><br></pre></td></tr></table></figure></li><li><p>编译测试的内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure></li><li><p>只打jar包：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn jar:jar</span><br></pre></td></tr></table></figure></li><li><p>只测试而不编译，也不测试编译：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -skipping compile -skinpping test -compile</span><br></pre></td></tr></table></figure><h6 id="skipping的灵活运用，当然也可以用于其他组合命令"><a href="#skipping的灵活运用，当然也可以用于其他组合命令" class="headerlink" title="-skipping的灵活运用，当然也可以用于其他组合命令"></a>-skipping的灵活运用，当然也可以用于其他组合命令</h6></li><li><p>清除eclipse的一些系统设置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:clean</span><br></pre></td></tr></table></figure></li><li><p>显示版本信息：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;maven官方库：&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;http://repo2.maven.org/maven2/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://repo2.maven.org/maven2/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;阿里云镜像：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Maven" scheme="https://cq-harry.github.io/Harry.github.io/categories/Maven/"/>
+    
+    
+      <category term="maven" scheme="https://cq-harry.github.io/Harry.github.io/tags/maven/"/>
+    
+      <category term="常用命令" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA控制台中文乱码解决方案</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/IDEA%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/IDEA控制台中文乱码解决方案/</id>
+    <published>2018-03-15T10:10:23.000Z</published>
+    <updated>2018-03-15T10:11:05.965Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>打开Intellij的根目录，找到下图的两个文件（根据你的系统是32位或64位选择其中一个配置文件），在配置文件中添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dfile.encoding=UTF-8</span><br></pre></td></tr></table></figure></li></ol><a id="more"></a><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512117071813_1.png" alt="id"></p><ol><li><p>配置项目编码以及IDE编码：<br><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512117128404_1.png" alt="id"></p></li><li><p>配置项目启动服务器参数：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dfile.encoding=UTF-8</span><br></pre></td></tr></table></figure></li></ol><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512117195505_1.png" alt="id"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;打开Intellij的根目录，找到下图的两个文件（根据你的系统是32位或64位选择其中一个配置文件），在配置文件中添加：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-Dfile.encoding=UTF-8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
+    
+      <category term="乱码" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E4%B9%B1%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux(CentOS) 下mysql自动备份</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/linux-CentOS-%E4%B8%8Bmysql%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/linux-CentOS-下mysql自动备份/</id>
+    <published>2018-03-15T10:08:36.000Z</published>
+    <updated>2018-03-15T10:09:43.003Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>创建并编辑文件/data/mysqlBack/bakmysql<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db_user=&quot;root&quot;</span><br><span class="line">db_passwd=&quot;root&quot;</span><br><span class="line">db_name=&quot;db_test&quot;</span><br><span class="line"># the directory for story your backup file.you shall change this dir</span><br><span class="line">backup_dir=&quot;/data/mysqlBack&quot;</span><br><span class="line"># date format for backup file (dd-mm-yyyy)</span><br><span class="line">time=&quot;$(date +&quot;%Y%m%d%H%M%S&quot;)&quot;     </span><br><span class="line"></span><br><span class="line">mysqldump -u$db_user  -p$db_passwd $db_name  &gt; &quot;$backup_dir/$db_name&quot;_&quot;$time.sql&quot;</span><br></pre></td></tr></table></figure></li></ol><p><em>注意</em>：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析</p><a id="more"></a><ol><li><p>修改文件backmysql属性，使其可执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/sbin/bakmysql</span><br></pre></td></tr></table></figure></li><li><p>创建定时任务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line"></span><br><span class="line"> #进入编辑界面，内容如下</span><br><span class="line"></span><br><span class="line"> 00 22 * * * /data/mysqlBack/backmysq</span><br><span class="line"> #每天22:00执行backmysq文件，备份数据库在路径/data/mysqlBack/下</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;创建并编辑文件/data/mysqlBack/bakmysql&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;db_user=&amp;quot;root&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db_passwd=&amp;quot;root&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db_name=&amp;quot;db_test&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# the directory for story your backup file.you shall change this dir&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;backup_dir=&amp;quot;/data/mysqlBack&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# date format for backup file (dd-mm-yyyy)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;time=&amp;quot;$(date +&amp;quot;%Y%m%d%H%M%S&amp;quot;)&amp;quot;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysqldump -u$db_user  -p$db_passwd $db_name  &amp;gt; &amp;quot;$backup_dir/$db_name&amp;quot;_&amp;quot;$time.sql&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;注意&lt;/em&gt;：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mysql" scheme="https://cq-harry.github.io/Harry.github.io/categories/Mysql/"/>
+    
+    
+      <category term="linux" scheme="https://cq-harry.github.io/Harry.github.io/tags/linux/"/>
+    
+      <category term="CentOS" scheme="https://cq-harry.github.io/Harry.github.io/tags/CentOS/"/>
+    
+      <category term="Mysql" scheme="https://cq-harry.github.io/Harry.github.io/tags/Mysql/"/>
+    
+      <category term="自动备份" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql数据库、Java服务端对emoji的支持</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81Java%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AF%B9emoji%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/mysql数据库、Java服务端对emoji的支持/</id>
+    <published>2018-03-15T10:05:58.000Z</published>
+    <updated>2018-03-15T10:07:03.949Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>如果UTF8字符集且是Java服务器的话，当存储含有emoji表情时，会抛出类似如下异常：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: Incorrect string value: &apos;\xF0\x9F\x92\x94&apos; for column &apos;name&apos; at row 1  </span><br><span class="line">    at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073)  </span><br><span class="line">    at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)  </span><br><span class="line">    at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)  </span><br><span class="line">    at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)  </span><br><span class="line">    at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)  </span><br><span class="line">    at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)  </span><br><span class="line">    at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)  </span><br><span class="line">    at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>这就是字符集不支持的异常。因为UTF-8编码有可能是两个、三个、四个字节，其中Emoji表情是4个字节，而Mysql的utf8编码最多3个字节，所以导致了数据插不进去。</p><h3 id="实施步骤："><a href="#实施步骤：" class="headerlink" title="实施步骤："></a>实施步骤：</h3><ol><li>utf8mb4的最低mysql版本支持版本为5.5.3+，若不是，请升级到较新版本。</li><li><p>修改database、table和column字符集。参考以下语句：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;</span><br><span class="line">ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</span><br><span class="line">ALTER TABLE user CHANGE nick_name nick_name varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</span><br></pre></td></tr></table></figure></li><li><p>修改mysql配置文件my.cnf（windows为my.ini）</p><h6 id="my-cnf一般在etc-mysql-my-cnf位置。找到后请在以下三部分里添加如下内容："><a href="#my-cnf一般在etc-mysql-my-cnf位置。找到后请在以下三部分里添加如下内容：" class="headerlink" title="my.cnf一般在etc/mysql/my.cnf位置。找到后请在以下三部分里添加如下内容："></a>my.cnf一般在etc/mysql/my.cnf位置。找到后请在以下三部分里添加如下内容：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br><span class="line">init_connect=&apos;SET NAMES utf8mb4&apos;</span><br></pre></td></tr></table></figure></li><li><p>重启 MySQL Server、检查字符集</p></li><li>如果你用的是java服务器，升级或确保你的mysql connector版本高于5.1.13，否则仍然无法使用utf8mb4</li><li>检查你服务端的db配置文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jdbc.driverClassName=com.mysql.jdbc.Driver</span><br><span class="line">jdbc.url=jdbc:mysql://localhost:3306/database?autoReconnect=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull</span><br><span class="line">jdbc.username=root</span><br><span class="line">jdbc.password=password</span><br></pre></td></tr></table></figure></li></ol><p><strong>特别说明其中的jdbc.url配置：如果你已经升级好了mysql-connector，其中的characterEncoding=utf8可以被自动被识别为utf8mb4（当然也兼容原来的utf8），而autoReconnect配置强烈建议配上，之前就是忽略了这个属性，导致因为缓存缘故，没有读取到DB最新配置，导致一直无法使用utf8mb4字符集！！这里还有一个坑，费了我好长时间。connector版本大于5.1.13的不能加characterEncoding=utf8。</strong></p><p>来自于：<a href="https://segmentfault.com/a/1190000000616820" target="_blank" rel="noopener">mysql/Java服务端对emoji的支持</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h3&gt;&lt;p&gt;如果UTF8字符集且是Java服务器的话，当存储含有emoji表情时，会抛出类似如下异常：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;java.sql.SQLException: Incorrect string value: &amp;apos;\xF0\x9F\x92\x94&amp;apos; for column &amp;apos;name&amp;apos; at row 1  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mysql" scheme="https://cq-harry.github.io/Harry.github.io/categories/Mysql/"/>
+    
+    
+      <category term="Mysql" scheme="https://cq-harry.github.io/Harry.github.io/tags/Mysql/"/>
+    
+      <category term="Java" scheme="https://cq-harry.github.io/Harry.github.io/tags/Java/"/>
+    
+      <category term="emoji" scheme="https://cq-harry.github.io/Harry.github.io/tags/emoji/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis Plugin插件介绍及破解</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/Mybatis-Plugin%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D%E5%8F%8A%E7%A0%B4%E8%A7%A3/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/Mybatis-Plugin插件介绍及破解/</id>
+    <published>2018-03-15T10:03:56.000Z</published>
+    <updated>2018-03-15T10:05:05.874Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mybatis-Plugin"><a href="#Mybatis-Plugin" class="headerlink" title="Mybatis Plugin"></a>Mybatis Plugin</h1><a id="more"></a><ol><li>Mybatis Plugin插件功能介绍<ol><li>提供Mapper接口与配置文件中对应SQL的导航</li><li>编辑XML文件时自动补全</li><li>根据Mapper接口, 使用快捷键生成xml文件及SQL标签</li><li>ResultMap中的property支持自动补全，支持级联(属性A.属性B.属性C)</li><li>快捷键生成@Param注解</li><li>XML中编辑SQL时, 括号自动补全</li><li>XML中编辑SQL时, 支持参数自动补全(基于@Param注解识别参数)</li><li>自动检查Mapper XML文件中ID冲突</li><li>自动检查Mapper XML文件中错误的属性值</li><li>支持Find Usage</li><li>支持重构从命名</li><li>支持别名</li><li>自动生成ResultMap属性</li><li>快捷键: Option + Enter(Mac) | Alt + Enter(Windows)</li></ol></li><li><p>Mybatis Plugin破解：</p><ul><li><p>破解文件地址：<a href="https://github.com/myoss/profile" target="_blank" rel="noopener">https://github.com/myoss/profile</a></p><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512115876681_1.png" alt="id"><br><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512115920699_1.png" alt="id"></p><p><strong>具体破解方法请参考上图中红色文件</strong></p></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Mybatis-Plugin&quot;&gt;&lt;a href=&quot;#Mybatis-Plugin&quot; class=&quot;headerlink&quot; title=&quot;Mybatis Plugin&quot;&gt;&lt;/a&gt;Mybatis Plugin&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
+    
+      <category term="Mybatis Plugin" scheme="https://cq-harry.github.io/Harry.github.io/tags/Mybatis-Plugin/"/>
+    
+      <category term="破解" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将二维码合并到背景图片中，并添加某些文字</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/%E5%B0%86%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%90%88%E5%B9%B6%E5%88%B0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%B8%AD%EF%BC%8C%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9F%90%E4%BA%9B%E6%96%87%E5%AD%97/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/将二维码合并到背景图片中，并添加某些文字/</id>
+    <published>2018-03-15T10:00:47.000Z</published>
+    <updated>2018-03-15T10:03:27.165Z</updated>
+    
+    <content type="html"><![CDATA[<p>将二维码合并到背景图片中，并添加某些文字</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">package com.bigcq.hmh.util;</span><br><span class="line"></span><br><span class="line">import javax.imageio.ImageIO;</span><br><span class="line">import java.awt.*;</span><br><span class="line">import java.awt.image.BufferedImage;</span><br><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Harry</span><br><span class="line"> * @date 2017/10/15 16:18</span><br><span class="line"> */</span><br><span class="line">public class ImageUtil &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 图片合并</span><br><span class="line">     *</span><br><span class="line">     * @param image      元素图片 BufferedImage image = ImageIO.read(new FileInputStream(&quot;E:\\erweima.png&quot;));</span><br><span class="line">     * @param bg         背景图片 BufferedImage bg = ImageIO.read(new FileInputStream(&quot;E:\\bg.jpg&quot;));</span><br><span class="line">     * @param width      合成后的元素宽度</span><br><span class="line">     * @param height     合成后的元素高度</span><br><span class="line">     * @param startX     在背景图片的X轴位置</span><br><span class="line">     * @param startY     在背景图片的Y轴位置</span><br><span class="line">     * @param picType    输出合成的图片格式</span><br><span class="line">     * @param path       输出合成图片的地址 E:/jieguo.png</span><br><span class="line">     * @param word       文字内容</span><br><span class="line">     * @param wordSize   文字大小</span><br><span class="line">     * @param wordStartX 文字在背景图片的X轴位置</span><br><span class="line">     * @param wordStartY 文字在背景图片的Y轴位置</span><br><span class="line">     * @return void</span><br><span class="line">     * @author Harry</span><br><span class="line">     * @Date 2017/10/15 17:51</span><br><span class="line">     */</span><br><span class="line">    public static void add(BufferedImage image, BufferedImage bg, int width, int height, int startX, int startY, String picType, String path, String word, int wordSize, int wordStartX, int wordStartY) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Graphics2D g = bg.createGraphics();</span><br><span class="line"></span><br><span class="line">            g.drawImage(image, startX, startY, width, height, null);</span><br><span class="line"></span><br><span class="line">            if (StringUtil.isNotBlank(word)) &#123;</span><br><span class="line">                Font font = new Font(&quot;微软雅黑&quot;, Font.PLAIN, wordSize);</span><br><span class="line">                g.setFont(font);</span><br><span class="line">                g.drawString(word, wordStartX, wordStartY);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            g.dispose();</span><br><span class="line">            bg.flush();</span><br><span class="line">            image.flush();</span><br><span class="line">            ImageIO.write(bg, picType, new File(path));</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        BufferedImage image = ImageIO.read(new FileInputStream(&quot;E:\\erweima.png&quot;));</span><br><span class="line">        BufferedImage bg = ImageIO.read(new FileInputStream(&quot;E:\\bg.jpg&quot;));//</span><br><span class="line"></span><br><span class="line">        add(image, bg, 190, 190, 210, 542, &quot;png&quot;, &quot;E:/jieguo.png&quot;, &quot;测试文字&quot;, 21, 120, 69);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;将二维码合并到背景图片中，并添加某些文字&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cq-harry.github.io/Harry.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://cq-harry.github.io/Harry.github.io/tags/Java/"/>
+    
+      <category term="二维码" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
+    
+      <category term="合并" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E5%90%88%E5%B9%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA 常用插件收集</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/IDEA-%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E6%94%B6%E9%9B%86/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/IDEA-常用插件收集/</id>
+    <published>2018-03-15T09:35:14.000Z</published>
+    <updated>2018-03-15T09:36:41.980Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p><strong>Eclipse Code Formatter：</strong><br>  从Eclipse换到IntelliJ IDEA后需要再重新设置代码模板，这里的话直接设置一个Eclipse Code Formatter插件，从Eclispe导出一份模板文件就可以使代码模板一致。</p></li><li><p><strong>.ignore：</strong><br>  git忽略不必要提交的文件</p></li></ul><a id="more"></a><ul><li><p><strong>Mybatis plugin：</strong><br>  <a href="https://www.cqhui.top/article/18" title="详情请点击查看" target="_blank" rel="noopener">详情请点击查看</a></p></li><li><p><strong>Jrebel for IntelliJ：</strong><br>  IDEA热部署插件：在 Java Web 开发中， 一般更新了 Java 文件后要手动重启 Tomcat 服务器， 才能生效， 浪费不少生命啊， 自从有了 JRebel 这神器的出现， 不论是更新 class 类还是更新 Spring 配置文件都能做到立马生效，大大提高开发效率。</p></li><li><p><strong>Alibaba Java Coding Guidelines：</strong><br>  阿里巴巴Java开发规约扫描插件</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Eclipse Code Formatter：&lt;/strong&gt;&lt;br&gt;  从Eclipse换到IntelliJ IDEA后需要再重新设置代码模板，这里的话直接设置一个Eclipse Code Formatter插件，从Eclispe导出一份模板文件就可以使代码模板一致。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.ignore：&lt;/strong&gt;&lt;br&gt;  git忽略不必要提交的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
+    
+      <category term="插件" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10 安装 mysql-5.7.19-winx64</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/win10-%E5%AE%89%E8%A3%85-mysql-5-7-19-winx64/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/win10-安装-mysql-5-7-19-winx64/</id>
+    <published>2018-03-15T09:29:22.000Z</published>
+    <updated>2018-03-15T09:33:47.933Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>下载地址：</li></ul><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p><ul><li>下载：</li></ul><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png" alt="Alt text"></p><a id="more"></a><ul><li>解压到指定的路径</li></ul><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114126430_1.png" alt="id"></p><p>上图红框中的<strong>my.ini</strong>以及<strong>data</strong>文件夹需要自己添加<br>    <strong>my.ini</strong>内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"># 设置为自己MYSQL的安装目录 </span><br><span class="line">basedir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64</span><br><span class="line"># 设置为MYSQL的数据目录</span><br><span class="line">datadir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64\data</span><br><span class="line">port=3306</span><br><span class="line">character_set_server=utf8</span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER</span><br><span class="line">#开启查询缓存</span><br><span class="line">explicit_defaults_for_timestamp=true</span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure></p><ul><li><p>设置环境变量<br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png" alt="id"></p></li><li><p>开始安装:<br>  用<strong>管理员</strong>身份打开cmd，并进入mysql安装目录下的bin</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#初始化data目录下的相关文件</span><br><span class="line">mysqld –initialize-insecure</span><br><span class="line"></span><br><span class="line">#安装</span><br><span class="line">mysqld install</span><br><span class="line"></span><br><span class="line">#启动</span><br><span class="line">net start mysql</span><br><span class="line"></span><br><span class="line">#修改密码</span><br><span class="line">set password for root@localhost = password(‘newPassword’);</span><br><span class="line"></span><br><span class="line">#登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>完工<br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png" alt="id"><br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png" alt="id"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;下载地址：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://dev.mysql.com/downloads/mysql/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="win10" scheme="https://cq-harry.github.io/Harry.github.io/categories/win10/"/>
+    
+      <category term="mysql" scheme="https://cq-harry.github.io/Harry.github.io/categories/win10/mysql/"/>
+    
+    
+      <category term="win10" scheme="https://cq-harry.github.io/Harry.github.io/tags/win10/"/>
+    
+      <category term="mysql" scheme="https://cq-harry.github.io/Harry.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/15/hello-world/"/>
+    <id>https://cq-harry.github.io/Harry.github.io/2018/03/15/hello-world/</id>
+    <published>2018-03-15T09:15:35.253Z</published>
+    <updated>2018-03-13T09:49:22.814Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Eclipse IDEA 码云 插件 OSCGit</title>
@@ -47,9 +294,9 @@
       <category term="Eclipse" scheme="https://cq-harry.github.io/Harry.github.io/categories/IDEA/Eclipse/"/>
     
     
-      <category term="Eclipse" scheme="https://cq-harry.github.io/Harry.github.io/tags/Eclipse/"/>
-    
       <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
+    
+      <category term="Eclipse" scheme="https://cq-harry.github.io/Harry.github.io/tags/Eclipse/"/>
     
       <category term="码云" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E7%A0%81%E4%BA%91/"/>
     
@@ -60,9 +307,9 @@
     <link href="https://cq-harry.github.io/Harry.github.io/2018/03/14/Java-float%E7%B2%BE%E5%BA%A6%E8%AE%A1%E7%AE%97%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://cq-harry.github.io/Harry.github.io/2018/03/14/Java-float精度计算的问题/</id>
     <published>2018-03-14T09:59:24.000Z</published>
-    <updated>2018-03-14T10:02:53.681Z</updated>
+    <updated>2018-03-15T09:31:51.846Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><p>方法一</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">123.2334f</span>;</span><br><span class="line"><span class="comment">//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)</span></span><br><span class="line"><span class="keyword">float</span> b = (<span class="keyword">float</span>) (Math.round(a * <span class="number">100</span>)) / <span class="number">100</span>;</span><br></pre></td></tr></table></figure></li><li><p>方法二</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> DecimalFormat(<span class="string">"###,###,###.##"</span>).format(<span class="number">100.12345</span>);</span><br></pre></td></tr></table></figure></li><li><p>方法三</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> ft = <span class="number">134.3435f</span>;</span><br><span class="line"><span class="comment">//设置位数</span></span><br><span class="line"><span class="keyword">int</span> scale = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//表示四舍五入，可以选择其他舍值方式，例如去尾，等等.</span></span><br><span class="line"><span class="keyword">int</span> roundingMode = <span class="number">4</span>;</span><br><span class="line">BigDecimal bd = <span class="keyword">new</span> BigDecimal((<span class="keyword">double</span>) ft);</span><br><span class="line">bd = bd.setScale(scale, roundingMode);</span><br><span class="line">ft = bd.floatValue();</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>方法一</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">123.2334f</span>;</span><br><span class="line"><span class="comment">//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)</span></span><br><span class="line"><span class="keyword">float</span> b = (<span class="keyword">float</span>) (Math.round(a * <span class="number">100</span>)) / <span class="number">100</span>;</span><br></pre></td></tr></table></figure></li><li><p>方法二</p></li></ul><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> DecimalFormat(<span class="string">"###,###,###.##"</span>).format(<span class="number">100.12345</span>);</span><br></pre></td></tr></table></figure><ul><li>方法三<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> ft = <span class="number">134.3435f</span>;</span><br><span class="line"><span class="comment">//设置位数</span></span><br><span class="line"><span class="keyword">int</span> scale = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//表示四舍五入，可以选择其他舍值方式，例如去尾，等等.</span></span><br><span class="line"><span class="keyword">int</span> roundingMode = <span class="number">4</span>;</span><br><span class="line">BigDecimal bd = <span class="keyword">new</span> BigDecimal((<span class="keyword">double</span>) ft);</span><br><span class="line">bd = bd.setScale(scale, roundingMode);</span><br><span class="line">ft = bd.floatValue();</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
@@ -71,6 +318,8 @@
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;123.2334f&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt; b = (&lt;span class=&quot;keyword&quot;&gt;float&lt;/span&gt;) (Math.round(a * &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;)) / &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;方法二&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -137,25 +386,6 @@
       <category term="IDEA" scheme="https://cq-harry.github.io/Harry.github.io/tags/IDEA/"/>
     
       <category term="快捷键" scheme="https://cq-harry.github.io/Harry.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://cq-harry.github.io/Harry.github.io/2018/03/13/hello-world/"/>
-    <id>https://cq-harry.github.io/Harry.github.io/2018/03/13/hello-world/</id>
-    <published>2018-03-13T06:06:32.901Z</published>
-    <updated>2018-03-13T09:49:22.814Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;
-    
-    </summary>
-    
     
   </entry>
   

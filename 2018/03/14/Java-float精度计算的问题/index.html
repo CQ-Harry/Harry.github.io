@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Harry-积少成多">
 <meta property="og:description" content="方法一 123float a = 123.2334f;//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)float b = (float) (Math.round(a * 100)) / 100;  方法二">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T10:02:53.681Z">
+<meta property="og:updated_time" content="2018-03-15T09:31:51.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java float精度计算的问题">
 <meta name="twitter:description" content="方法一 123float a = 123.2334f;//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)float b = (float) (Math.round(a * 100)) / 100;  方法二">
@@ -410,11 +410,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">123.2334f</span>;</span><br><span class="line"><span class="comment">//(这里的100就是2位小数点,如果要其它位,如4位,这里两个100改成10000)</span></span><br><span class="line"><span class="keyword">float</span> b = (<span class="keyword">float</span>) (Math.round(a * <span class="number">100</span>)) / <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方法二</p>
+</li>
+</ul>
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> DecimalFormat(<span class="string">"###,###,###.##"</span>).format(<span class="number">100.12345</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法三</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> ft = <span class="number">134.3435f</span>;</span><br><span class="line"><span class="comment">//设置位数</span></span><br><span class="line"><span class="keyword">int</span> scale = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//表示四舍五入，可以选择其他舍值方式，例如去尾，等等.</span></span><br><span class="line"><span class="keyword">int</span> roundingMode = <span class="number">4</span>;</span><br><span class="line">BigDecimal bd = <span class="keyword">new</span> BigDecimal((<span class="keyword">double</span>) ft);</span><br><span class="line">bd = bd.setScale(scale, roundingMode);</span><br><span class="line">ft = bd.floatValue();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法三<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> ft = <span class="number">134.3435f</span>;</span><br><span class="line"><span class="comment">//设置位数</span></span><br><span class="line"><span class="keyword">int</span> scale = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//表示四舍五入，可以选择其他舍值方式，例如去尾，等等.</span></span><br><span class="line"><span class="keyword">int</span> roundingMode = <span class="number">4</span>;</span><br><span class="line">BigDecimal bd = <span class="keyword">new</span> BigDecimal((<span class="keyword">double</span>) ft);</span><br><span class="line">bd = bd.setScale(scale, roundingMode);</span><br><span class="line">ft = bd.floatValue();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -543,7 +544,7 @@
               
                 <a href="/Harry.github.io/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -554,7 +555,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Harry.github.io/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -565,7 +566,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Harry.github.io/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -688,7 +689,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共407字</span>
+  <span class="post-count">博客全站共2.5k字</span>
 </div>
 
 
