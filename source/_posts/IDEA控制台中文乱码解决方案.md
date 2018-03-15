@@ -6,7 +6,8 @@ categories: IDEA
 ---
 
 
-1. 打开Intellij的根目录，找到下图的两个文件（根据你的系统是32位或64位选择其中一个配置文件），在配置文件中添加：
+#### 打开Intellij的根目录，找到下图的两个文件（根据你的系统是32位或64位选择其中一个配置文件），在配置文件中添加：
+
 ```
 -Dfile.encoding=UTF-8
 ```
@@ -15,10 +16,11 @@ categories: IDEA
 
 ![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512117071813_1.png)
 
-2. 配置项目编码以及IDE编码：
+#### 配置项目编码以及IDE编码：
 ![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512117128404_1.png)
 
-3. 配置项目启动服务器参数：
+#### 配置项目启动服务器参数：
+
 ```
 -Dfile.encoding=UTF-8
 ```

@@ -5,7 +5,8 @@ tags: [linux,CentOS,Mysql,自动备份]
 categories: Mysql
 ---
 
-1. 创建并编辑文件/data/mysqlBack/bakmysql
+#### 创建并编辑文件/data/mysqlBack/bakmysql
+
 ```
 db_user="root"
 db_passwd="root"
@@ -17,16 +18,19 @@ time="$(date +"%Y%m%d%H%M%S")"
 
 mysqldump -u$db_user  -p$db_passwd $db_name  > "$backup_dir/$db_name"_"$time.sql"
 ```
-*注意*：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析
+
+**注意**：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析
 
 <!--more-->
 
-2. 修改文件backmysql属性，使其可执行
+#### 修改文件backmysql属性，使其可执行
+
 ```
 chmod +x /usr/sbin/bakmysql
 ```
 
-3. 创建定时任务
+#### 创建定时任务
+
 ```
 crontab -e
 

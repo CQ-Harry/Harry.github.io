@@ -5,22 +5,21 @@ tags: [win10,mysql]
 categories: [win10,mysql]
 ---
 
-- 下载地址：
-
+### 下载地址：
 [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 
-- 下载：
+### 下载：
 
 ![Alt text](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png)
 
 <!--more-->
 
-- 解压到指定的路径
+### 解压到指定的路径
 
 ![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114126430_1.png)
 
 上图红框中的**my.ini**以及**data**文件夹需要自己添加
-	**my.ini**内容如下：
+**my.ini**内容如下：
 ```
 [client]
 port=3306
@@ -38,11 +37,11 @@ sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER
 explicit_defaults_for_timestamp=true
 skip-grant-tables
 ```
-- 设置环境变量
-	![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png)
+### 设置环境变量
+![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png)
 
-- 开始安装:
-	用**管理员**身份打开cmd，并进入mysql安装目录下的bin
+### 开始安装:
+用**管理员**身份打开cmd，并进入mysql安装目录下的bin
 ```
 #初始化data目录下的相关文件
 mysqld –initialize-insecure
@@ -60,6 +59,6 @@ set password for root@localhost = password(‘newPassword’);
 mysql -u root -p
 ```
 
-- 完工
-	![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png)
-	![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png)
+### 完工
+![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png)
+![id](http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png)
