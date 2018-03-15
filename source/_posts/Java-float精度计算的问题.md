@@ -12,7 +12,9 @@ float a = 123.2334f;
 float b = (float) (Math.round(a * 100)) / 100;
 ```
 - 方法二
+
 <!--more-->
+
 ```java
 String a = new DecimalFormat("###,###,###.##").format(100.12345);
 ```
