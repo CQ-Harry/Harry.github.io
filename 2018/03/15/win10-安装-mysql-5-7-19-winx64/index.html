@@ -88,23 +88,23 @@
 
 
 
-<meta name="description" content="下载地址：  https://dev.mysql.com/downloads/mysql/  下载：">
+<meta name="description" content="下载地址：https://dev.mysql.com/downloads/mysql/ 下载：">
 <meta name="keywords" content="win10,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="win10 安装 mysql-5.7.19-winx64">
 <meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/2018/03/15/win10-安装-mysql-5-7-19-winx64/index.html">
 <meta property="og:site_name" content="Harry-积少成多">
-<meta property="og:description" content="下载地址：  https://dev.mysql.com/downloads/mysql/  下载：">
+<meta property="og:description" content="下载地址：https://dev.mysql.com/downloads/mysql/ 下载：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png">
 <meta property="og:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114126430_1.png">
 <meta property="og:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png">
 <meta property="og:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png">
 <meta property="og:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png">
-<meta property="og:updated_time" content="2018-03-15T09:33:47.933Z">
+<meta property="og:updated_time" content="2018-03-16T01:14:29.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10 安装 mysql-5.7.19-winx64">
-<meta name="twitter:description" content="下载地址：  https://dev.mysql.com/downloads/mysql/  下载：">
+<meta name="twitter:description" content="下载地址：https://dev.mysql.com/downloads/mysql/ 下载：">
 <meta name="twitter:image" content="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png">
 
 
@@ -422,29 +422,14 @@
       
 
       
-        <ul>
-<li>下载地址：</li>
-</ul>
-<p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
-<ul>
-<li>下载：</li>
-</ul>
-<p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png" alt="Alt text"></p>
+        <h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
+<h3 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h3><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512113967774_1.png" alt="Alt text"></p>
 <a id="more"></a>
-<ul>
-<li>解压到指定的路径</li>
-</ul>
-<p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114126430_1.png" alt="id"></p>
-<p>上图红框中的<strong>my.ini</strong>以及<strong>data</strong>文件夹需要自己添加<br>    <strong>my.ini</strong>内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"># 设置为自己MYSQL的安装目录 </span><br><span class="line">basedir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64</span><br><span class="line"># 设置为MYSQL的数据目录</span><br><span class="line">datadir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64\data</span><br><span class="line">port=3306</span><br><span class="line">character_set_server=utf8</span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER</span><br><span class="line">#开启查询缓存</span><br><span class="line">explicit_defaults_for_timestamp=true</span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>设置环境变量<br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png" alt="id"></p>
-</li>
-<li><p>开始安装:<br>  用<strong>管理员</strong>身份打开cmd，并进入mysql安装目录下的bin</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#初始化data目录下的相关文件</span><br><span class="line">mysqld –initialize-insecure</span><br><span class="line"></span><br><span class="line">#安装</span><br><span class="line">mysqld install</span><br><span class="line"></span><br><span class="line">#启动</span><br><span class="line">net start mysql</span><br><span class="line"></span><br><span class="line">#修改密码</span><br><span class="line">set password for root@localhost = password(‘newPassword’);</span><br><span class="line"></span><br><span class="line">#登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完工<br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png" alt="id"><br>  <img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png" alt="id"></p>
-</li>
-</ul>
+<h3 id="解压到指定的路径"><a href="#解压到指定的路径" class="headerlink" title="解压到指定的路径"></a>解压到指定的路径</h3><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114126430_1.png" alt="id"></p>
+<p>上图红框中的<strong>my.ini</strong>以及<strong>data</strong>文件夹需要自己添加<br><strong>my.ini</strong>内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"># 设置为自己MYSQL的安装目录 </span><br><span class="line">basedir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64</span><br><span class="line"># 设置为MYSQL的数据目录</span><br><span class="line">datadir=E:\Program Files (x86)\MySQL\mysql-5.7.19-winx64\data</span><br><span class="line">port=3306</span><br><span class="line">character_set_server=utf8</span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER</span><br><span class="line">#开启查询缓存</span><br><span class="line">explicit_defaults_for_timestamp=true</span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure></p>
+<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114228199_1.png" alt="id"></p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装:"></a>开始安装:</h3><p>用<strong>管理员</strong>身份打开cmd，并进入mysql安装目录下的bin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#初始化data目录下的相关文件</span><br><span class="line">mysqld –initialize-insecure</span><br><span class="line"></span><br><span class="line">#安装</span><br><span class="line">mysqld install</span><br><span class="line"></span><br><span class="line">#启动</span><br><span class="line">net start mysql</span><br><span class="line"></span><br><span class="line">#修改密码</span><br><span class="line">set password for root@localhost = password(‘newPassword’);</span><br><span class="line"></span><br><span class="line">#登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<h3 id="完工"><a href="#完工" class="headerlink" title="完工"></a>完工</h3><p><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114302800_1.png" alt="id"><br><img src="http://cqhui.oss-cn-shenzhen.aliyuncs.com/1512114335965_1.png" alt="id"></p>
 
       
     </div>
@@ -487,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Harry.github.io/2018/03/15/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/Harry.github.io/2018/03/14/Eclipse-IDEA-码云-插件-OSCGit/" rel="next" title="Eclipse IDEA 码云 插件 gitee">
+                <i class="fa fa-chevron-left"></i> Eclipse IDEA 码云 插件 gitee
               </a>
             
           </div>
@@ -551,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -571,7 +565,7 @@
               
                 <a href="/Harry.github.io/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -582,7 +576,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Harry.github.io/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -593,7 +587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Harry.github.io/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -658,6 +652,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载地址："><span class="nav-text">下载地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载："><span class="nav-text">下载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压到指定的路径"><span class="nav-text">解压到指定的路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置环境变量"><span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始安装"><span class="nav-text">开始安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完工"><span class="nav-text">完工</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -716,7 +726,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共2.5k字</span>
+  <span class="post-count">博客全站共16.8k字</span>
 </div>
 
 

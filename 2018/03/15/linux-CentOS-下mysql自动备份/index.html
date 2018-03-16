@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="linux,CentOS,Mysql,自动备份," />
+  <meta name="keywords" content="Mysql,linux,CentOS,自动备份," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;qu">
-<meta name="keywords" content="linux,CentOS,Mysql,自动备份">
+<meta name="description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;quo">
+<meta name="keywords" content="Mysql,linux,CentOS,自动备份">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux(CentOS) 下mysql自动备份">
 <meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/2018/03/15/linux-CentOS-下mysql自动备份/index.html">
 <meta property="og:site_name" content="Harry-积少成多">
-<meta property="og:description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;qu">
+<meta property="og:description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;quo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T10:09:43.003Z">
+<meta property="og:updated_time" content="2018-03-16T01:14:29.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux(CentOS) 下mysql自动备份">
-<meta name="twitter:description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;qu">
+<meta name="twitter:description" content="创建并编辑文件/data/mysqlBack/bakmysql123456789db_user=&amp;quot;root&amp;quot;db_passwd=&amp;quot;root&amp;quot;db_name=&amp;quot;db_test&amp;quot;# the directory for story your backup file.you shall change this dirbackup_dir=&amp;quo">
 
 
 
@@ -405,20 +405,11 @@
       
 
       
-        <ol>
-<li>创建并编辑文件/data/mysqlBack/bakmysql<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db_user=&quot;root&quot;</span><br><span class="line">db_passwd=&quot;root&quot;</span><br><span class="line">db_name=&quot;db_test&quot;</span><br><span class="line"># the directory for story your backup file.you shall change this dir</span><br><span class="line">backup_dir=&quot;/data/mysqlBack&quot;</span><br><span class="line"># date format for backup file (dd-mm-yyyy)</span><br><span class="line">time=&quot;$(date +&quot;%Y%m%d%H%M%S&quot;)&quot;     </span><br><span class="line"></span><br><span class="line">mysqldump -u$db_user  -p$db_passwd $db_name  &gt; &quot;$backup_dir/$db_name&quot;_&quot;$time.sql&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><em>注意</em>：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析</p>
+        <h4 id="创建并编辑文件-data-mysqlBack-bakmysql"><a href="#创建并编辑文件-data-mysqlBack-bakmysql" class="headerlink" title="创建并编辑文件/data/mysqlBack/bakmysql"></a>创建并编辑文件/data/mysqlBack/bakmysql</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db_user=&quot;root&quot;</span><br><span class="line">db_passwd=&quot;root&quot;</span><br><span class="line">db_name=&quot;db_test&quot;</span><br><span class="line"># the directory for story your backup file.you shall change this dir</span><br><span class="line">backup_dir=&quot;/data/mysqlBack&quot;</span><br><span class="line"># date format for backup file (dd-mm-yyyy)</span><br><span class="line">time=&quot;$(date +&quot;%Y%m%d%H%M%S&quot;)&quot;     </span><br><span class="line"></span><br><span class="line">mysqldump -u$db_user  -p$db_passwd $db_name  &gt; &quot;$backup_dir/$db_name&quot;_&quot;$time.sql&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：-p和$db_passwd之间没有空格，不然$db_passwd会被当做参数[数据库名]来解析</p>
 <a id="more"></a>
-<ol>
-<li><p>修改文件backmysql属性，使其可执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/sbin/bakmysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建定时任务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line"></span><br><span class="line"> #进入编辑界面，内容如下</span><br><span class="line"></span><br><span class="line"> 00 22 * * * /data/mysqlBack/backmysq</span><br><span class="line"> #每天22:00执行backmysq文件，备份数据库在路径/data/mysqlBack/下</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<h4 id="修改文件backmysql属性，使其可执行"><a href="#修改文件backmysql属性，使其可执行" class="headerlink" title="修改文件backmysql属性，使其可执行"></a>修改文件backmysql属性，使其可执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/sbin/bakmysql</span><br></pre></td></tr></table></figure>
+<h4 id="创建定时任务"><a href="#创建定时任务" class="headerlink" title="创建定时任务"></a>创建定时任务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line"></span><br><span class="line"> #进入编辑界面，内容如下</span><br><span class="line"></span><br><span class="line"> 00 22 * * * /data/mysqlBack/backmysq</span><br><span class="line"> #每天22:00执行backmysq文件，备份数据库在路径/data/mysqlBack/下</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -446,11 +437,11 @@
       
         <div class="post-tags">
           
+            <a href="/Harry.github.io/tags/Mysql/" rel="tag"><i class="fa fa-tag"></i> Mysql</a>
+          
             <a href="/Harry.github.io/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
           
             <a href="/Harry.github.io/tags/CentOS/" rel="tag"><i class="fa fa-tag"></i> CentOS</a>
-          
-            <a href="/Harry.github.io/tags/Mysql/" rel="tag"><i class="fa fa-tag"></i> Mysql</a>
           
             <a href="/Harry.github.io/tags/自动备份/" rel="tag"><i class="fa fa-tag"></i> 自动备份</a>
           
@@ -529,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -549,7 +549,7 @@
               
                 <a href="/Harry.github.io/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -560,7 +560,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Harry.github.io/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -571,7 +571,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Harry.github.io/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -636,6 +636,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建并编辑文件-data-mysqlBack-bakmysql"><span class="nav-text">创建并编辑文件/data/mysqlBack/bakmysql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改文件backmysql属性，使其可执行"><span class="nav-text">修改文件backmysql属性，使其可执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建定时任务"><span class="nav-text">创建定时任务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -694,7 +710,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共2.5k字</span>
+  <span class="post-count">博客全站共16.8k字</span>
 </div>
 
 

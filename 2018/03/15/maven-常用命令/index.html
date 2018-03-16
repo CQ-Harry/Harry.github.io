@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="maven官方库：http://repo2.maven.org/maven2/  阿里云镜像：">
+<meta name="description" content="maven官方库：http://repo2.maven.org/maven2/ 阿里云镜像：">
 <meta name="keywords" content="maven,常用命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven 常用命令">
 <meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/2018/03/15/maven-常用命令/index.html">
 <meta property="og:site_name" content="Harry-积少成多">
-<meta property="og:description" content="maven官方库：http://repo2.maven.org/maven2/  阿里云镜像：">
+<meta property="og:description" content="maven官方库：http://repo2.maven.org/maven2/ 阿里云镜像：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T10:12:39.170Z">
+<meta property="og:updated_time" content="2018-03-16T01:14:29.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven 常用命令">
-<meta name="twitter:description" content="maven官方库：http://repo2.maven.org/maven2/  阿里云镜像：">
+<meta name="twitter:description" content="maven官方库：http://repo2.maven.org/maven2/ 阿里云镜像：">
 
 
 
@@ -405,73 +405,28 @@
       
 
       
-        <ul>
-<li><p>maven官方库：<br><strong><a href="http://repo2.maven.org/maven2/" target="_blank" rel="noopener">http://repo2.maven.org/maven2/</a></strong></p>
-</li>
-<li><p>阿里云镜像：</p>
-</li>
-</ul>
-<a id="more"></a>
+        <h3 id="maven官方库："><a href="#maven官方库：" class="headerlink" title="maven官方库："></a>maven官方库：</h3><p><strong><a href="http://repo2.maven.org/maven2/" target="_blank" rel="noopener">http://repo2.maven.org/maven2/</a></strong></p>
+<h3 id="阿里云镜像："><a href="#阿里云镜像：" class="headerlink" title="阿里云镜像："></a>阿里云镜像：</h3><a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;alimaven&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;aliyun maven&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;http://maven.aliyun.com/nexus/content/repositories/central/&lt;/url&gt;</span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>maven依赖查询：<a href="http://mvnrepository.com/" target="_blank" rel="noopener">http://mvnrepository.com/</a></p>
-</li>
-<li><p>maven常用命令：</p>
-</li>
-</ul>
-<ol>
-<li><p>创建Maven的普通java项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=projectName</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建Maven的Web项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=webappName</span><br><span class="line">-DarchetypeArtifactId=maven-archetype-webapp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译源代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译测试代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>产生site：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn site</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在本地Repository中安装jar：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>清除产生的项目：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成eclipse项目：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:eclipse</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成idea项目：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn idea:idea</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>组合使用goal命令，如只打包不测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -Dtest package</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译测试的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>只打jar包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn jar:jar</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>只测试而不编译，也不测试编译：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -skipping compile -skinpping test -compile</span><br></pre></td></tr></table></figure>
-<h6 id="skipping的灵活运用，当然也可以用于其他组合命令"><a href="#skipping的灵活运用，当然也可以用于其他组合命令" class="headerlink" title="-skipping的灵活运用，当然也可以用于其他组合命令"></a>-skipping的灵活运用，当然也可以用于其他组合命令</h6></li>
-<li><p>清除eclipse的一些系统设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:clean</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示版本信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<h3 id="maven依赖查询："><a href="#maven依赖查询：" class="headerlink" title="maven依赖查询："></a>maven依赖查询：</h3><p><a href="http://mvnrepository.com/" target="_blank" rel="noopener">http://mvnrepository.com/</a></p>
+<h3 id="maven常用命令："><a href="#maven常用命令：" class="headerlink" title="maven常用命令："></a>maven常用命令：</h3><h4 id="创建Maven的普通java项目"><a href="#创建Maven的普通java项目" class="headerlink" title="创建Maven的普通java项目"></a>创建Maven的普通java项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=projectName</span><br></pre></td></tr></table></figure>
+<h4 id="创建Maven的Web项目"><a href="#创建Maven的Web项目" class="headerlink" title="创建Maven的Web项目"></a>创建Maven的Web项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create</span><br><span class="line">-DgroupId=packageName</span><br><span class="line">-DartifactId=webappName</span><br><span class="line">-DarchetypeArtifactId=maven-archetype-webapp</span><br></pre></td></tr></table></figure>
+<h4 id="编译源代码"><a href="#编译源代码" class="headerlink" title="编译源代码"></a>编译源代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile</span><br></pre></td></tr></table></figure>
+<h4 id="编译测试代码"><a href="#编译测试代码" class="headerlink" title="编译测试代码"></a>编译测试代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure>
+<h4 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test</span><br></pre></td></tr></table></figure>
+<h4 id="产生site"><a href="#产生site" class="headerlink" title="产生site"></a>产生site</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn site</span><br></pre></td></tr></table></figure>
+<h4 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+<h4 id="在本地Repository中安装jar"><a href="#在本地Repository中安装jar" class="headerlink" title="在本地Repository中安装jar"></a>在本地Repository中安装jar</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install</span><br></pre></td></tr></table></figure>
+<h4 id="清除产生的项目"><a href="#清除产生的项目" class="headerlink" title="清除产生的项目"></a>清除产生的项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
+<h4 id="生成eclipse项目"><a href="#生成eclipse项目" class="headerlink" title="生成eclipse项目"></a>生成eclipse项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:eclipse</span><br></pre></td></tr></table></figure>
+<h4 id="生成idea项目"><a href="#生成idea项目" class="headerlink" title="生成idea项目"></a>生成idea项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn idea:idea</span><br></pre></td></tr></table></figure>
+<h4 id="组合使用goal命令，如只打包不测试"><a href="#组合使用goal命令，如只打包不测试" class="headerlink" title="组合使用goal命令，如只打包不测试"></a>组合使用goal命令，如只打包不测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -Dtest package</span><br></pre></td></tr></table></figure>
+<h4 id="编译测试的内容"><a href="#编译测试的内容" class="headerlink" title="编译测试的内容"></a>编译测试的内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -compile</span><br></pre></td></tr></table></figure>
+<h4 id="只打jar包"><a href="#只打jar包" class="headerlink" title="只打jar包"></a>只打jar包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn jar:jar</span><br></pre></td></tr></table></figure>
+<h4 id="只测试而不编译，也不测试编译"><a href="#只测试而不编译，也不测试编译" class="headerlink" title="只测试而不编译，也不测试编译"></a>只测试而不编译，也不测试编译</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test -skipping compile -skinpping test -compile</span><br></pre></td></tr></table></figure>
+<p><strong>-skipping的灵活运用，当然也可以用于其他组合命令</strong></p>
+<h4 id="清除eclipse的一些系统设置"><a href="#清除eclipse的一些系统设置" class="headerlink" title="清除eclipse的一些系统设置"></a>清除eclipse的一些系统设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:clean</span><br></pre></td></tr></table></figure>
+<h4 id="显示版本信息"><a href="#显示版本信息" class="headerlink" title="显示版本信息"></a>显示版本信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -523,6 +478,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Harry.github.io/2018/03/15/Java-BigDecimal-小数点处理-计算/" rel="prev" title="Java BigDecimal 小数点处理 计算">
+                Java BigDecimal 小数点处理 计算 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -603,7 +562,7 @@
               
                 <a href="/Harry.github.io/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -614,7 +573,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Harry.github.io/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -625,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Harry.github.io/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -699,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#skipping的灵活运用，当然也可以用于其他组合命令"><span class="nav-number">1.</span> <span class="nav-text">-skipping的灵活运用，当然也可以用于其他组合命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#maven官方库："><span class="nav-text">maven官方库：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阿里云镜像："><span class="nav-text">阿里云镜像：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maven依赖查询："><span class="nav-text">maven依赖查询：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maven常用命令："><span class="nav-text">maven常用命令：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Maven的普通java项目"><span class="nav-text">创建Maven的普通java项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Maven的Web项目"><span class="nav-text">创建Maven的Web项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译源代码"><span class="nav-text">编译源代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译测试代码"><span class="nav-text">编译测试代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行测试"><span class="nav-text">运行测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生site"><span class="nav-text">产生site</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打包"><span class="nav-text">打包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在本地Repository中安装jar"><span class="nav-text">在本地Repository中安装jar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清除产生的项目"><span class="nav-text">清除产生的项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成eclipse项目"><span class="nav-text">生成eclipse项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成idea项目"><span class="nav-text">生成idea项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合使用goal命令，如只打包不测试"><span class="nav-text">组合使用goal命令，如只打包不测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译测试的内容"><span class="nav-text">编译测试的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只打jar包"><span class="nav-text">只打jar包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只测试而不编译，也不测试编译"><span class="nav-text">只测试而不编译，也不测试编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清除eclipse的一些系统设置"><span class="nav-text">清除eclipse的一些系统设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示版本信息"><span class="nav-text">显示版本信息</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -764,7 +723,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共2.5k字</span>
+  <span class="post-count">博客全站共16.8k字</span>
 </div>
 
 
