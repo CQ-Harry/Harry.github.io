@@ -10,20 +10,20 @@ categories: Spring Cloud
 > 该模块能够自动为Spring Boot 构建的应用提供一系列用于监控的端点。同时，Spring Cloud 在实现各个微服务组件的时候，进一步为该模块做了不少扩展，比如，为原生端点增加了更多的指标和度量信息。
 
 <!--more-->
-## 引入
+## 1.引入
 > 在pom.xml的dependencies节点中新增spring-boot-starter-actuator的依赖即可：
 ```xml
 <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-actuator</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
-## application.properties添加配置参数
+## 2.application.properties添加配置参数
 > 访问/beans 等敏感的信息时候报错401
-```
+```properties
 management.security.enabled=false
 ```
-## 端点解析
+## 3.端点解析
 > 分为3大类：应用配置类（autoconfig、beans、configprops、env、mappings、info）、度量指标类（metrics、health、dump、trace）、操作控制类（shutdown）
 
 | ID  | 描述  | 敏感  |

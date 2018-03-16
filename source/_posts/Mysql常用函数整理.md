@@ -5,9 +5,13 @@ tags: [Mysql,常用函数]
 categories: Mysql
 ---
 
-**经常编写程序的一定体会得到函数的重要性，丰富的函数往往能让工作事半功倍。**
+> **经常编写程序的一定体会得到函数的重要性，丰富的函数往往能让工作事半功倍。**
+
+
+
 <!--more-->
-#### 字符串函数
+
+#### 1.字符串函数
 
 | 函数   | 功能  |
 | ------------ | :------------ |
@@ -27,7 +31,7 @@ categories: Mysql
 | trim(str) | 去掉字符串 str 行尾和行头的空格 |
 | substring(str,x,y) | 返回从字符串str x 位置起 y 个字符长度的字串 |
 
-#### 数值函数
+#### 2.数值函数
 
 | 函数 | 功能 |
 | ------------ | :------------ |
@@ -39,7 +43,7 @@ categories: Mysql
 | round(x,y) | 返回参数 x 的四舍五入的有 y 位小数的值 |
 | truncate(x,y) | 返回数字 x 截断为 y 位小数的结果 |
 
-#### 日期和时间的函数
+#### 3.日期和时间的函数
 
 | 函数 | 功能 |
 | ------------ | :------------ |
@@ -57,7 +61,7 @@ categories: Mysql
 | date_add(date,interval expr type) | 返回一个日期或时间值加上一个时间间隔的时间值 |
 | datediff(expr,expr2) | 返回起始时间 expr 和结束时间 expr2 之前的天数 |
 
-#### MySQL中的日期和时间格式
+#### 4.MySQL中的日期和时间格式
 
 | 格式符 | 格式说明 |
 | ------------ | :------------ |
@@ -87,7 +91,7 @@ categories: Mysql
 | %y | 两位数字表示的年份 |
 | %% | 直接值“%” |
 
-#### 流程函数
+#### 5.流程函数
 
 | 函数 | 功能 |
 | ------------ | :------------ |
@@ -96,7 +100,7 @@ categories: Mysql
 | CASE WHEN[value1] THEN[result1]... ELSE[default]END | 如果value1是真，返回result1；否则返回default |
 | CASE [expr] WHEN [value1] THEN [result1] ... ELSE[default]END | 如果expr等于value1，返回result；否则返回default |
 
-#### 其他常用函数
+#### 6.其他常用函数
 
 | 函数 | 功能 |
 | ------------ | :------------ |
