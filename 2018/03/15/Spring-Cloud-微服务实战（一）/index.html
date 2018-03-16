@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Harry-积少成多">
 <meta property="og:description" content="SpringBoot-actuator 该模块能够自动为Spring Boot 构建的应用提供一系列用于监控的端点。同时，Spring Cloud 在实现各个微服务组件的时候，进一步为该模块做了不少扩展，比如，为原生端点增加了更多的指标和度量信息。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-16T01:14:29.970Z">
+<meta property="og:updated_time" content="2018-03-16T09:14:49.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Cloud 微服务实战（一）">
 <meta name="twitter:description" content="SpringBoot-actuator 该模块能够自动为Spring Boot 构建的应用提供一系列用于监控的端点。同时，Spring Cloud 在实现各个微服务组件的时候，进一步为该模块做了不少扩展，比如，为原生端点增加了更多的指标和度量信息。">
@@ -409,13 +409,13 @@
 <p>该模块能够自动为Spring Boot 构建的应用提供一系列用于监控的端点。同时，Spring Cloud 在实现各个微服务组件的时候，进一步为该模块做了不少扩展，比如，为原生端点增加了更多的指标和度量信息。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
-<p>在pom.xml的dependencies节点中新增spring-boot-starter-actuator的依赖即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="1-引入"><a href="#1-引入" class="headerlink" title="1.引入"></a>1.引入</h2><blockquote>
+<p>在pom.xml的dependencies节点中新增spring-boot-starter-actuator的依赖即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="application-properties添加配置参数"><a href="#application-properties添加配置参数" class="headerlink" title="application.properties添加配置参数"></a>application.properties添加配置参数</h2><blockquote>
+<h2 id="2-application-properties添加配置参数"><a href="#2-application-properties添加配置参数" class="headerlink" title="2.application.properties添加配置参数"></a>2.application.properties添加配置参数</h2><blockquote>
 <p>访问/beans 等敏感的信息时候报错401<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">management.security.enabled=false</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="端点解析"><a href="#端点解析" class="headerlink" title="端点解析"></a>端点解析</h2><blockquote>
+<h2 id="3-端点解析"><a href="#3-端点解析" class="headerlink" title="3.端点解析"></a>3.端点解析</h2><blockquote>
 <p>分为3大类：应用配置类（autoconfig、beans、configprops、env、mappings、info）、度量指标类（metrics、health、dump、trace）、操作控制类（shutdown）</p>
 </blockquote>
 <table>
@@ -717,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBoot-actuator"><span class="nav-text">SpringBoot-actuator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引入"><span class="nav-text">引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#application-properties添加配置参数"><span class="nav-text">application.properties添加配置参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#端点解析"><span class="nav-text">端点解析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBoot-actuator"><span class="nav-text">SpringBoot-actuator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-引入"><span class="nav-text">1.引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-application-properties添加配置参数"><span class="nav-text">2.application.properties添加配置参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-端点解析"><span class="nav-text">3.端点解析</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -782,7 +782,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共16.8k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
 
 

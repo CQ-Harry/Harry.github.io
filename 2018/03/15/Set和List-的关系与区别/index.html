@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="两个接口都是继承自CollectionList (inteface)次序是List 的最重要特点,它确保维护元素特定的顺序.">
+<meta name="description" content="两个接口都是继承自Collection">
 <meta name="keywords" content="Java,Set,List">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Set和List 的关系与区别">
 <meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/2018/03/15/Set和List-的关系与区别/index.html">
 <meta property="og:site_name" content="Harry-积少成多">
-<meta property="og:description" content="两个接口都是继承自CollectionList (inteface)次序是List 的最重要特点,它确保维护元素特定的顺序.">
+<meta property="og:description" content="两个接口都是继承自Collection">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-16T01:14:29.969Z">
+<meta property="og:updated_time" content="2018-03-16T09:39:12.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Set和List 的关系与区别">
-<meta name="twitter:description" content="两个接口都是继承自CollectionList (inteface)次序是List 的最重要特点,它确保维护元素特定的顺序.">
+<meta name="twitter:description" content="两个接口都是继承自Collection">
 
 
 
@@ -405,9 +405,34 @@
       
 
       
-        <h4 id="两个接口都是继承自Collection"><a href="#两个接口都是继承自Collection" class="headerlink" title="两个接口都是继承自Collection"></a>两个接口都是继承自Collection</h4><h5 id="List-inteface"><a href="#List-inteface" class="headerlink" title="List (inteface)"></a>List (inteface)</h5><p><strong>次序是List 的最重要特点,它确保维护元素特定的顺序.</strong><br><a id="more"></a></p>
-<h6 id="ArrayList：允许对元素快速随机访问。"><a href="#ArrayList：允许对元素快速随机访问。" class="headerlink" title="ArrayList：允许对元素快速随机访问。"></a>ArrayList：允许对元素快速随机访问。</h6><h6 id="LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist-，addLast-，getFirst，getLast，removeFirst和removeLast-。这些方法使得LinkedList可当作堆栈／队列／双向队列。"><a href="#LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist-，addLast-，getFirst，getLast，removeFirst和removeLast-。这些方法使得LinkedList可当作堆栈／队列／双向队列。" class="headerlink" title="LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist()，addLast()，getFirst，getLast，removeFirst和removeLast()。这些方法使得LinkedList可当作堆栈／队列／双向队列。"></a>LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist()，addLast()，getFirst，getLast，removeFirst和removeLast()。这些方法使得LinkedList可当作堆栈／队列／双向队列。</h6><h5 id="Set-inteface"><a href="#Set-inteface" class="headerlink" title="Set (inteface)"></a>Set (inteface)</h5><p><strong>存入Set 的每个元素必须唯一，不保证维护元素的次序.加入Set 的Object必须定义equals()方法</strong></p>
-<h6 id="HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode-。"><a href="#HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode-。" class="headerlink" title="HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode()。"></a>HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode()。</h6><h6 id="TreeSet：保护次序的Set，使用它可以从Set-中提取有序序列。"><a href="#TreeSet：保护次序的Set，使用它可以从Set-中提取有序序列。" class="headerlink" title="TreeSet：保护次序的Set，使用它可以从Set 中提取有序序列。"></a>TreeSet：保护次序的Set，使用它可以从Set 中提取有序序列。</h6><h6 id="LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。"><a href="#LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。" class="headerlink" title="LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。"></a>LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。</h6><h4 id="它们之间的存储方式不一样："><a href="#它们之间的存储方式不一样：" class="headerlink" title="它们之间的存储方式不一样："></a>它们之间的存储方式不一样：</h4><h5 id="TreeSet采用红黑树的树据结构排序元素；"><a href="#TreeSet采用红黑树的树据结构排序元素；" class="headerlink" title="TreeSet采用红黑树的树据结构排序元素；"></a>TreeSet采用红黑树的树据结构排序元素；</h5><h5 id="HashSet采用散列函数，这是专门为快速查询而设计的；"><a href="#HashSet采用散列函数，这是专门为快速查询而设计的；" class="headerlink" title="HashSet采用散列函数，这是专门为快速查询而设计的；"></a>HashSet采用散列函数，这是专门为快速查询而设计的；</h5><h5 id="LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。"><a href="#LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。" class="headerlink" title="LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。"></a>LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。</h5>
+        <p><strong>两个接口都是继承自Collection</strong></p>
+<a id="more"></a>
+<ul>
+<li><p>List (inteface)</p>
+<p><strong>次序是List 的最重要特点,它确保维护元素特定的顺序.</strong></p>
+<ul>
+<li>ArrayList：允许对元素快速随机访问。</li>
+<li>LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist()，addLast()，getFirst，getLast，removeFirst和removeLast()。这些方法使得LinkedList可当作堆栈／队列／双向队列。</li>
+</ul>
+</li>
+<li><p>Set (inteface)</p>
+<p><strong>存入Set 的每个元素必须唯一，不保证维护元素的次序.加入Set 的Object必须定义equals()方法</strong></p>
+<ul>
+<li>HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode()。</li>
+<li>TreeSet：保护次序的Set，使用它可以从Set 中提取有序序列。</li>
+<li>LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。</li>
+</ul>
+</li>
+</ul>
+<p><strong>它们之间的存储方式不一样：</strong></p>
+<ul>
+<li>TreeSet采用红黑树的树据结构排序元素；</li>
+</ul>
+<ul>
+<li>HashSet采用散列函数，这是专门为快速查询而设计的；</li>
+<li>LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。</li>
+</ul>
+
       
     </div>
     
@@ -515,17 +540,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -631,22 +647,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#两个接口都是继承自Collection"><span class="nav-text">两个接口都是继承自Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#List-inteface"><span class="nav-text">List (inteface)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ArrayList：允许对元素快速随机访问。"><span class="nav-text">ArrayList：允许对元素快速随机访问。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist-，addLast-，getFirst，getLast，removeFirst和removeLast-。这些方法使得LinkedList可当作堆栈／队列／双向队列。"><span class="nav-text">LinkedList：对顺序访问进行优化，向List中间插入与移除的开销并不大，具有addFrist()，addLast()，getFirst，getLast，removeFirst和removeLast()。这些方法使得LinkedList可当作堆栈／队列／双向队列。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Set-inteface"><span class="nav-text">Set (inteface)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode-。"><span class="nav-text">HashSet：为快速查找而设计的Set，存入HashSet对象必须定义hashCode()。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TreeSet：保护次序的Set，使用它可以从Set-中提取有序序列。"><span class="nav-text">TreeSet：保护次序的Set，使用它可以从Set 中提取有序序列。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。"><span class="nav-text">LinkedHashSet：具有HashSet的查询速度，且内部使用链表维护元素的次序。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#它们之间的存储方式不一样："><span class="nav-text">它们之间的存储方式不一样：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#TreeSet采用红黑树的树据结构排序元素；"><span class="nav-text">TreeSet采用红黑树的树据结构排序元素；</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HashSet采用散列函数，这是专门为快速查询而设计的；"><span class="nav-text">HashSet采用散列函数，这是专门为快速查询而设计的；</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。"><span class="nav-text">LinkedHashSet内部使用散列以加快查询速度，同时使用链表维护元素的次序。</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -705,7 +705,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共16.8k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
 
 
