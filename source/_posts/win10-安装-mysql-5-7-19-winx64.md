@@ -1,8 +1,8 @@
 ---
 title: win10 安装 mysql-5.7.19-winx64
 date: 2018-03-15 17:29:22
-tags: [win10,mysql]
-categories: [win10,mysql]
+tags: [win10,Mysql]
+categories: Mysql
 ---
 
 ### 下载地址：
