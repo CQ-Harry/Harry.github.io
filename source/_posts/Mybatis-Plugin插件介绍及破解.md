@@ -9,7 +9,7 @@ categories: IDEA
 
 <!--more-->
 
-#####1.提供Mapper接口与配置文件中对应SQL的导航
+##### 1.提供Mapper接口与配置文件中对应SQL的导航
 
 ##### 2.编辑XML文件时自动补全
 
