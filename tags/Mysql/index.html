@@ -91,7 +91,7 @@
 <meta name="description" content="多一分远见，就少一分刺激">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Harry-积少成多">
-<meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/tags/mysql/index.html">
+<meta property="og:url" content="https://cq-harry.github.io/Harry.github.io/tags/Mysql/index.html">
 <meta property="og:site_name" content="Harry-积少成多">
 <meta property="og:description" content="多一分远见，就少一分刺激">
 <meta property="og:locale" content="zh-Hans">
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://cq-harry.github.io/Harry.github.io/tags/mysql/"/>
+  <link rel="canonical" href="https://cq-harry.github.io/Harry.github.io/tags/Mysql/"/>
 
 
 
 
 
-  <title>标签: mysql | Harry-积少成多</title>
+  <title>标签: Mysql | Harry-积少成多</title>
   
 
 
@@ -295,9 +295,121 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>mysql<small>标签</small>
+        <h1>Mysql<small>标签</small>
         </h1>
       </div>
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Harry.github.io/2018/03/15/Mysql常用函数整理/" itemprop="url">
+              
+                <span itemprop="name">Mysql常用函数整理</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-15T22:59:24+08:00"
+              content="2018-03-15" >
+          03-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Harry.github.io/2018/03/15/mysql-存储过程/" itemprop="url">
+              
+                <span itemprop="name">mysql 存储实例</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-15T22:46:04+08:00"
+              content="2018-03-15" >
+          03-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Harry.github.io/2018/03/15/linux-CentOS-下mysql自动备份/" itemprop="url">
+              
+                <span itemprop="name">linux(CentOS) 下mysql自动备份</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-15T18:08:36+08:00"
+              content="2018-03-15" >
+          03-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Harry.github.io/2018/03/15/mysql数据库、Java服务端对emoji的支持/" itemprop="url">
+              
+                <span itemprop="name">mysql数据库、Java服务端对emoji的支持</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-15T18:05:58+08:00"
+              content="2018-03-15" >
+          03-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
 
       
         
@@ -383,7 +495,7 @@
               
                 <a href="/Harry.github.io/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -394,7 +506,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Harry.github.io/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -405,7 +517,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Harry.github.io/tags/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -528,7 +640,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共16.9k字</span>
+  <span class="post-count">博客全站共24.6k字</span>
 </div>
 
 
@@ -734,86 +846,6 @@
       var $visitors = $(".leancloud_visitors");
       var url = $visitors.attr('id').trim();
       var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-  
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
-  
-</body>
-</html>
-
-ata-flag-title').trim();
       var query = new AV.Query(Counter);
 
       query.equalTo("url", url);
